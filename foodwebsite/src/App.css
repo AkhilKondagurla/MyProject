@@ -1,8 +1,72 @@
-.imgSize img{
+.imgSize img {
   height: 100%;
   width: 100%;
 }
-.logImag img{
-  height: 50px;
-  width: 70px;
+
+.logImag img {
+  height: 70px;
+  width: 90px;
 }
+
+.login-image {
+  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-size: cover;
+}
+
+body{
+  background:#eee;
+  overflow-x: hidden;
+}
+
+.bgWhite{
+  background:white;
+  box-shadow:0px 3px 6px 0px #cacaca;
+}
+
+.title{
+  font-weight:600;
+  margin-top:20px;
+  font-size:24px
+}
+
+.customBtn{
+  padding:10px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 36px;
+  width: 120px;
+  text-align:center;
+}
+
+form input{
+  display:inline-block;
+  width:50px;
+  height:50px;
+  text-align:center;
+}
+
+.nav-bgclr{
+  background-color: rgba(183, 119, 238, 0.316);
+}
+.p-sty{
+  color: azure;
+  font-weight: 700;
+  font-family:'Courier New', Courier, monospace;
+  font-size:x-large;
+  margin-top: 200px;
+  margin-bottom: 1rem;
+}
+.font-style{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hedline h1{
+  color: #cacaca;
+  font-size: 2.5rem;
+  width: 100vw;
+  height: 100vh;
+}
+

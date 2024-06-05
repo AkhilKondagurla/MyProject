@@ -1,39 +1,50 @@
 import React, { useState } from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Form, Button } from "react-bootstrap";
+import Otp from './otp/Otp';
 
 const Login = () => {
-    const [form, setForm] = useState({
-        username: "",
-        password: ""
-    })
-    const [showPassword, setShowPassword] = useState(false);
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setForm({
-            ...form,
-            [name]: value
-        })
+    const [show, setShow] = useState(false)
+    const handleShow = () => {
+        setShow(true)
     }
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
 
     return (
-        <div className='row'>
-            <form className='mt-5'>
-                <div className='col-md-3 mb-3'> {/* Added mb-3 class for margin-bottom */}
-                    <input type='text' name='username' placeholder='Username' className='form-control form-control-' on onChange={handleChange} value={form.username} />
+        <div>
+            <div className='container'>
+                < div className='login-image'>
+                    <div className='d-flex flex-column align-items-center justify-content-center'>
+                        <div className='row'>
+                            <div className='col-lg-3 mt-3 w-100'>
+                                <Form.Group>
+                                    <Form.Label style={{ color: "white" }}>Name</Form.Label>
+                                    <Form.Control />
+                                </Form.Group>
+                            </div>
+                            <div className='col-lg-3 mt-3 w-100'>
+                                <Form.Group>
+                                    <Form.Label style={{ color: "white" }}>Mobile</Form.Label>
+                                    <Form.Control />
+                                </Form.Group>
+                            </div>
+                            <div className='col-lg-3 mt-5 ms-3'>
+                                <Button onClick={handleShow}>GetOtp</Button>
+                            </div>
+                        </div>
+
+                        <div className='hedline ms-5 mt-5'>
+                            <h1 >Get Delicious, Food Anytime</h1>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div className='col-md-3 mb-3'> {/* Added mb-3 class for margin-bottom */}
-                    <input type={showPassword ? 'text' : 'password'} name='password' placeholder='Password' className='form-control form-control-lg' onChange={handleChange} value={form.password} />
-                    <button type="button" onClick={togglePasswordVisibility}>
-                        {showPassword ? <FaEyeSlash /> : <FaEye />}
-                    </button>
-                </div>
-                <div className='col-md-3'> {/* Removed mb-3 class */}
-                    <input type='submit' value='LogIn' className='btn btn-primary btn-lg' /> {/* Changed name to value and added btn classes */}
-                </div>
-            </form>
+
+                <Otp
+                    show={show}
+                    setShow={setShow}
+                />
+            </div>
+
         </div>
     )
 }
