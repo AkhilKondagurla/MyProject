@@ -1,0 +1,41 @@
+.dewali-top-section{
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/diwali-bg.png");
+    height: 40vh;
+    background-size: cover;
+}
+.top-section-hedding{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size:36px;
+    color: aliceblue;
+    padding: 30px;
+    width: 220px;
+}
+.dewali-items-sections{
+    text-align: center;
+    background-color: #e6f6ff;
+    padding: 25px;
+}
+.item-card{
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    padding: 16px;
+    margin: 25px;
+}
+.card-item-image{
+    height: 64px;
+    width: 64px;
+}
+.dewali-item-name{
+    color: #323f4b;
+    font-size: 20px;
+    font-family:Roboto;
+    font-weight:normal;
+}
+.dewali-card-price{
+    font-family: Roboto;
+    font-size: 15px;
+    font-size:normal;
+
+}

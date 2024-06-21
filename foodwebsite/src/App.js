@@ -6,17 +6,21 @@ import Rigister from './components/Rigister';
 import Appbar from './components/Appbar';
 import Login from './components/Login';
 import Home from './components/Home';
+import Dewali from './components/Dewali';
+import ViewDetails from './components/ViewDetails';
 
 function App() {
   return (
     <div className="App">
       <StrictMode>
         <BrowserRouter>
-        <Appbar />
+        {/* <Appbar /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Rigister />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/dewali" element={<Dewali />} />
+            <Route path="/viewdetails" element={< ViewDetails/>} />
           </Routes>
         </BrowserRouter>
       </StrictMode>

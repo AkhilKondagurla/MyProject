@@ -82,10 +82,10 @@ const Restapi = () => {
        }
          
          const newPassword = generateRandomPassword(12);
+         console.log("Genarated password",newPassword)
            
            
        // find one value and push ento one array
-       
        const arrayData = [{
            username:"akhil",
            password:"",
@@ -119,9 +119,84 @@ const Restapi = () => {
        }
        
        console.log("array Data:",findOne);
-       
-       
-      
+
+
+       const array = [8,6, 3, 6, 8,6,5,2, 9,4,7];
+
+const gg = array.sort()
+console.log("sorting array", gg)
+
+//Remove duplicates in array
+const g1 = [... new Set(gg)]
+console.log("Remove duplicates in array",g1);
+
+// filter duplicates in aray
+const aa = gg.filter((value, index,self)=> self.indexOf(value) === index)
+
+console.log("filter duplicates in aray",aa)
+
+// spliceing this array
+const bb = gg.splice(2,3)
+console.log("Rmoved this array",bb,"Rmaining values" , gg)
+
+//Rest Api Pdate methos
+const updateVendor = async () => {
+    try {
+      const response = await fetch('https://yourapiurl.com/vendors/' + editId, {
+        method: 'PUT', // or 'PATCH' if your API supports it  
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${yourAuthToken}`, // Include this if your API requires authentication
+        },
+        body: JSON.stringify({
+          company: form.company,
+          contactPerson: form.contactPerson,
+          email: form.email,
+          contactNumber: form.contactNumber,
+          address: form.address,
+          username: globalUserName
+        })
+      });
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok' + response.statusText);
+      }
+  
+      const data = await response.json();
+  
+      // Optionally refetch data here if needed using another fetch call
+      await fetchVendors(); // Define fetchVendors to refetch the vendor list
+  
+      showMessage("Update successfully", "success");
+      handleClose();
+    } catch (error) {
+      console.log(error);
+      showMessage("Something went wrong", "error");
+    }
+  };
+
+  // Revers a String 
+
+const reverseString = (data) => {
+  return data.split('').reverse().join('');     // if you give more space it will print revers word
+                                                 // Output:- not? are office today come Pratap
+}
+
+const originalString = "Pratap come today office are not?";
+const reversedString = reverseString(originalString);
+console.log(reversedString);  // Output: "? ton era eciffo yadot emoc patarP"
+
+// checking given string palindrom are not?
+const isPalindrom=(data)=>{
+  const convertString = data.toString()
+  const reversedStr = convertString.split('').reverse().join('')
+  return data === reversedStr 
+}
+
+const originalStringData = "a man can kind heart"
+const checkingCondition = isPalindrom(originalStringData)
+console.log(checkingCondition)
+
   return (
     <div>Restapi</div>
   )
