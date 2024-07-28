@@ -1,0 +1,19 @@
+.hedding{
+    font-size: 24px;
+    font-weight: bold;
+
+}
+.bg-color{
+    background-color: rgb(190, 211, 212);
+    border-radius: 10px;
+    padding: 25px;
+}
+.button-type{
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.box-color{
+padding: 34px;
+}
