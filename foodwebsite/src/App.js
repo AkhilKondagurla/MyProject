@@ -9,6 +9,7 @@ import Dewali from './components/Dewali';
 import ViewDetails from './components/ViewDetails';
 import Grids from './components/Grids';
 import Navbar from './components/Navbar';
+import Restaurants from './components/Restaurants'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/dewali" element={<Dewali />} />
             <Route path="/viewdetails" element={< ViewDetails/>} />
             <Route path="/grids" element={< Grids/>} />
+            <Route path="/Restaurants" element={< Restaurants/>} />
           </Routes>
         </BrowserRouter>
       </StrictMode>

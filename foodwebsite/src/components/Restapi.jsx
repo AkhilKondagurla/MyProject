@@ -197,6 +197,18 @@ const originalStringData = "a man can kind heart"
 const checkingCondition = isPalindrom(originalStringData)
 console.log(checkingCondition)
 
+
+// Sum of Array
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+const sumOfTotalNum = (numArray) => {
+    return numArray.reduce((acc, curr) => acc + curr, 0);
+};
+
+
+const Total = sumOfTotalNum(numbers);
+console.log(Total, "hhhhhhhhhhh")
+
   return (
     <div>Restapi</div>
   )

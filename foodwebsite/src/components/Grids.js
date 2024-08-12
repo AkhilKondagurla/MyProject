@@ -25,7 +25,6 @@ const Grids = () => {
                             <div className='col-12 col-lg-6'>
                                 <h1 className='hedding text-center'>The Golden Temple</h1>
                                 <p>
-
                                     The Golden temple is famous for its full golden dome, it is one of the most sacred pilgrim spots for Sikhs. The Mandir is built on a 67-ft square of marble and is a two storied structure. Maharaja Ranjit Singh had the upper half of the building built with approximately 1200 kg of gold leaf.
                                 </p>
                             </div>
