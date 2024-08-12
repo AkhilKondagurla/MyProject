@@ -242,3 +242,22 @@
   margin: 22px;
   border-radius: 40px;
 }
+.thanking-selection-model-title{
+  color: #d0b200;
+  font-weight: 800;
+}
+
+.linear-gradiant-background{
+  height: 100vh;
+  background-image: linear-gradient(#fff8db,#fae38c);
+}
+
+.custom-button{
+  color: white;
+  background-image: linear-gradient(#d0b200, #a58d00);
+  width: 130px;
+  height: 45px;
+  border-width: 0;
+  border-radius: 8px;
+  margin-right: 10px;
+}

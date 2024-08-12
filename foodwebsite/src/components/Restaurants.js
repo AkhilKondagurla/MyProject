@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Img1 from "../Images/food-serve.png"
 import Img2 from "../Images/fruits-img.png"
 import Img3 from "../Images/offers-img.png"
@@ -222,7 +222,7 @@ const Restaurants = () => {
                     </div>
                 </div>
             </div>
-            <div class="thanking-customers-section pt-5 pb-5">
+            <div class="thanking-customers-section pt-5 pb-5 linear-gradiant-background">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
@@ -237,7 +237,7 @@ const Restaurants = () => {
                                 class="thanking-customers-section-img d-md-none"
                             />
                             <div>
-                                <button class="custom-button">Redeem Gift</button>
+                                <button class="custom-button" data-bs-toggle="modal" data-bs-target="#exampleModal">Redeem Gift</button>
                             </div>
                         </div>
                         <div class="col-12 col-md-5 d-none d-md-block">
@@ -276,8 +276,27 @@ const Restaurants = () => {
                             <img src={logo1} class="food-munch-logo" />
                             <h1 class="footer-section-mail-id">akhilKondagurla9666@gmail.com</h1>
                             <p class="footer-section-address">
-                               1-83, Buyyaram, (Jilleda Rode)-chowrasta, Vemanpelli, Mancherial, Telangana - 504219
+                                1-83, Buyyaram, (Jilleda Rode)-chowrasta, Vemanpelli, Mancherial, Telangana - 504219
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog mt-5">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title thanking-selection-model-title" id="exampleModalLabel">Gift Vocher</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img
+                                src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/gift-voucher-img.png"
+                                class="w-100"
+                            />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
